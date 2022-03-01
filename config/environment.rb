@@ -11,3 +11,8 @@ ActiveRecord::Base.establish_connection(
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require_all 'app'
+
+#set vhs so it is plural and singular
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'vhs', 'vhs'
+end
